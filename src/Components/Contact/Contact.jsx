@@ -4,8 +4,26 @@ import themePattern from "../../assets/theme_pattern.svg";
 import mailIcon from "../../assets/mail_icon.svg";
 import locationIcon from "../../assets/location_icon.svg";
 import callIcon from "../../assets/call_icon.svg";
+import { useState } from "react";
 
 const Contact = () => {
+  const [result, setResult] = useState("");
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    formData.append("access_key", import.meta.env.VITE_WEB3FORMS_KEY);
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
+
+    const data = await response.json();
+    setResult(data.success ? "Success!" : "Error");
+    alert(result + " sending message");
+  };
+
   return (
     <div id="contact" className="contact">
       <div className="contact-title">
@@ -37,16 +55,27 @@ const Contact = () => {
           </div>
         </div>
 
-        <form className="contact-right">
+        <form className="contact-right" onSubmit={onSubmit}>
           <label htmlFor="">Your Name</label>
-          <input type="text" name="name" placeholder="Enter your name" />
+          <input
+            type="text"
+            name="name"
+            placeholder="Enter your name"
+            required
+          />
           <label htmlFor="">Your Email</label>
-          <input type="email" name="email" placeholder="Enter your email" />
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
           <label htmlFor="">Write your message here</label>
           <textarea
             name="message"
             rows="8"
             placeholder="Enter your message"
+            required
           ></textarea>
           <button type="submit" className="contact-submit">
             Submit Now
