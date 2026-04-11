@@ -1,22 +1,22 @@
 import React from "react";
 import "./Hero.css";
-import profileImage from "../../assets/profile_img.svg";
+import profileImage from "../../assets/profilePhoto.jpg";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 const Hero = () => {
   return (
-    <div id="home" className="hero">
+    <div id="home" className="hero container">
       <img src={profileImage} alt="Auzair's Image" />
       <h1>
-        <span>I'm Alex Bennett,</span> frontend developer based in USA.
+        <span>I'm Auzair,</span> a Frontend ReactJS Web Developer
       </h1>
       <p>
-        I am a frontend developer from California, USA with 10 years of
-        experience in multiple companies like Microsoft, Tesla and Apple
+        I am a Computer Science graduate and a Frontend Web Developer from
+        Kandahar, Afghanistan
       </p>
       <div className="hero-action">
         <div className="hero-connect">
           <AnchorLink className="anchor-link" offset={50} href="#contact">
-            Connect with me{" "}
+            Contact me{" "}
           </AnchorLink>
         </div>
         <div className="hero-resume">My resume</div>

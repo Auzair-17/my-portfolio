@@ -1,5 +1,4 @@
 import "./Navbar.css";
-import logo from "../../assets/logo.svg";
 import { useState, useRef } from "react";
 import underline from "../../assets/nav_underline.svg";
 import AnchorLink from "react-anchor-link-smooth-scroll";
@@ -18,8 +17,11 @@ const Navbar = () => {
   };
 
   return (
-    <div className="navbar">
-      <img src={logo} alt="Auzair" />
+    <div className="navbar container">
+      <div className="logo">
+        <h1>AuZaiR</h1>
+        <img src={underline} alt="" />
+      </div>
       <img src={menuOpen} alt="" className="nav-open" onClick={openMenu} />
       <ul className="nav-menu" ref={menuRef}>
         <img src={menuClose} alt="" className="nav-close" onClick={closeMenu} />
@@ -31,7 +33,7 @@ const Navbar = () => {
         </li>
         <li onClick={() => setmenu("about")}>
           <AnchorLink className="anchor-link" offset={50} href="#about">
-            <p>About Me</p>
+            <p>About me</p>
           </AnchorLink>
           {menu === "about" ? <img src={underline} alt="" /> : <></>}
         </li>
@@ -50,7 +52,7 @@ const Navbar = () => {
       </ul>
       <div className="nav-connect">
         <AnchorLink className="anchor-link" offset={50} href="#contact">
-          Connect with me{" "}
+          Contact me{" "}
         </AnchorLink>
       </div>
     </div>

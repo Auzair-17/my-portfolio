@@ -6,7 +6,7 @@ import arrowIcon from "../../assets/arrow_icon.svg";
 
 const MyWork = () => {
   return (
-    <div id="portfolio" className="mywork">
+    <div id="portfolio" className="mywork container">
       <div className="mywork-title">
         <h1>My latest work</h1>
         <img src={themePattern} alt="" />
@@ -14,7 +14,9 @@ const MyWork = () => {
 
       <div className="mywork-container">
         {myWorkData.map((work, index) => (
-          <img key={index} src={work.w_img} alt="work image" />
+          <a key={index} href={work.git_repo_url} target="blank">
+            <img src={work.w_img} alt="work image" />
+          </a>
         ))}
       </div>
 

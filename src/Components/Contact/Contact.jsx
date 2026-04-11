@@ -25,7 +25,7 @@ const Contact = () => {
   };
 
   return (
-    <div id="contact" className="contact">
+    <div id="contact" className="contact container">
       <div className="contact-title">
         <h1>Get in touch</h1>
         <img src={themePattern} alt="" />

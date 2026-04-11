@@ -1,14 +1,14 @@
 import React from "react";
 import "./Footer.css";
-import footerLogo from "../../assets/footer_logo.svg";
+import AuzairLogo from "../../assets/AuzairLogo.png";
 import userIcon from "../../assets/user_icon.svg";
 
 const Footer = () => {
   return (
-    <div className="footer">
+    <div className="footer container">
       <div className="footer-top">
         <div className="footer-top-left">
-          <img src={footerLogo} alt="" />
+          <img src={AuzairLogo} alt="" />
           <p>
             I am a frontend developer from California, USA with 10 years of
             experience in multiple companies like Microsoft, Tesla and Apple
@@ -32,7 +32,7 @@ const Footer = () => {
         <div className="footer-bottom-right">
           <p>Terms of services</p>
           <p>Privacy policy</p>
-          <p>Connect with me</p>
+          <p>Connect me</p>
         </div>
       </div>
     </div>

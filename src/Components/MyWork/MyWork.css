@@ -4,7 +4,8 @@
   align-items: center;
   justify-content: center;
   gap: 80px;
-  margin: 80px 170px;
+  margin-top: 150px;
+  padding-inline: 80px;
 }
 .mywork-title {
   position: relative;
@@ -23,12 +24,13 @@
 .mywork-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 40px;
+  gap: 60px 40px;
 }
 .mywork-container img {
   box-sizing: border-box;
-  width: 420px;
-  height: 280px;
+  /* width: 420px;
+  height: 280px; */
+  width: 100%;
   cursor: pointer;
   transition: 0.3s;
 }
@@ -55,8 +57,7 @@
 
 @media (max-width: 768px) {
   .mywork {
-    margin: 50px 70px;
-    gap: 50px;
+    gap: 60px;
     align-items: start;
   }
   .mywork h1 {
@@ -80,5 +81,18 @@
     padding: 20px 40px;
     font-size: 18px;
     margin: 50px auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .mywork {
+    padding-inline: 30px;
+  }
+  .mywork h1 {
+    font-size: 35px;
+  }
+  .mywork-container {
+    grid-template-columns: 1fr;
+    gap: 60px;
   }
 }

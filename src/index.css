@@ -9,3 +9,8 @@ body {
   font-family: "outfit", sans-serif;
   /* height: 100vh; */
 }
+
+.container {
+  max-width: 1180px;
+  margin: 20px auto;
+}
