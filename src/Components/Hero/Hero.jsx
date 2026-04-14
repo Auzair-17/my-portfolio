@@ -19,7 +19,12 @@ const Hero = () => {
             Contact me{" "}
           </AnchorLink>
         </div>
-        <div className="hero-resume">My resume</div>
+        <button
+          onClick={() => window.open("/files/auzair-cv.pdf", "_blank")}
+          className="hero-resume"
+        >
+          My resume
+        </button>
       </div>
     </div>
   );

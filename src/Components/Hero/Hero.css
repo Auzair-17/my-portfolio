@@ -47,6 +47,8 @@
   border-color: white;
 }
 .hero-resume {
+  background: none;
+  color: white;
   border: 2px solid #fff;
   padding: 25px 75px;
   border-radius: 50px;
