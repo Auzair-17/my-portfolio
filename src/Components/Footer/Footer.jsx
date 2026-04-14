@@ -10,8 +10,8 @@ const Footer = () => {
         <div className="footer-top-left">
           <img src={AuzairLogo} alt="" />
           <p>
-            I am a frontend developer from California, USA with 10 years of
-            experience in multiple companies like Microsoft, Tesla and Apple
+            I am a Computer Science graduate and a Frontend Web Developer from
+            Kandahar, Afghanistan.
           </p>
         </div>
         <div className="footer-top-right">
@@ -27,12 +27,12 @@ const Footer = () => {
 
       <div className="footer-bottom">
         <p className="footer-bottom-left">
-          &copy; 2026 Alex Bennett. All rights reseved
+          &copy; 2026 Auzair. All rights reseved
         </p>
         <div className="footer-bottom-right">
           <p>Terms of services</p>
           <p>Privacy policy</p>
-          <p>Connect me</p>
+          <p>Contact me</p>
         </div>
       </div>
     </div>
