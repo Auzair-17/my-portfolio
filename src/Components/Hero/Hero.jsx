@@ -20,7 +20,7 @@ const Hero = () => {
           </AnchorLink>
         </div>
         <button
-          onClick={() => window.open("/files/auzair-cv.pdf", "_blank")}
+          onClick={() => window.open("/files/auzair_cv.pdf", "_blank")}
           className="hero-resume"
         >
           My resume
